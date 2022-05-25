@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .container
 {
     width: 100%;
@@ -5,17 +12,23 @@
     justify-content: center;
     align-items: center;
 }
-
 .scheda-anagrafica
+{
+    background-image: url(../media/sfondo.svg);
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 400px;
+    border: 1px solid black;
+}
+.first
 {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
     align-items: flex-start;
-    width: 50%;
     gap: 2%;
-    height: 400px;
     padding: 10px;
+
 }
 
 .container-img
@@ -26,25 +39,47 @@
 {
     width: 100%
 }
+
 .container-info
 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    gap: 2%;
+    justify-content: space-around;
+    color: white;
     width: 100%;
 }
 
-.container-info1
+.divide
 {
-    display: flex;
-    align-items: center;
-    gap: 2%;
-    justify-content: space-around;
+    width: 50%;
+}
+
+.container-info a
+{
+    text-decoration: none;
+    color: white;
 }
 
 .container-varie
 {
-    margin-bottom: 7%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
+.container-varie span
+{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    width: 50%;
+}
+span label
+{
+    color: white;
+}
+figure
+{
+    color: white;
+}
