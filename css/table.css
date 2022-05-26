@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+.menu h1::before{
+    content: '\f2b9';
+    font-family:"Font Awesome 5 Free";
+    margin-right: 1%;
+}
+
+.container-table
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tr:nth-child(odd) { background-color: #76b576; }
+tr:nth-child(even) { background-color: #a1ffa1; } */
+
+/* tr:nth-child(odd) { background-color: whi; } */
+tr:nth-child(even) { background-color: rgb(208, 230, 251); }
+
+table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+tr:hover{
+    background-color: yellow;
+}
+
+th
+{
+    font-size: 25px;
+}
+td
+{
+    width: 33%;
+    height: 40px;
+    font-size: 18px;
+}
+.cella
+{
+    background-color: yellow;
+    padding: 4px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+footer
+{
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+    height: 50px;
+    align-items: center;
+}

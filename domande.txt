@@ -1,0 +1,2 @@
+1) nella pagina index.html ho dovuto mettendo solo html, body margin 0 e padding 0, invece di *, rimane un margine nella parte superiore, come devo fare senza utilizzare *?
+2) Se volessi centrare il container-body al centro della pagina con height 100vh e display flex non sarebbe al centro come posso fare?
