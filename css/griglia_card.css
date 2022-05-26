@@ -4,7 +4,6 @@ html,body{
     margin: 0;
     padding: 0;
 }
-
 .menu{
     width: 100%;
     background-color: #034f84;
@@ -30,61 +29,63 @@ html,body{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .container-body{
-    background-color: #92a8d1;
     width: 50%;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     align-items: center;
-    justify-content: space-around;
-    height: 200px;
+    justify-items: center;
 }
 
-.container-scelte{
+.item{
+    background-color: #034f84;
+    width: 80%;
+    height: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     gap: 2%;
-    width: 100%;
+    border-radius: 15px;
+    position: relative;
 }
 
-.border-class{
-    border: 1px solid white;
-    padding: 10px;
-    text-align: center;
+.item:hover{
+    background-color: #92a8d1;
 }
 
-a{
+.item span label{
+    font-family: 'Roboto', sans-serif;
     color: white;
-    text-decoration: none;
+    font-size: 20px;
 }
 
-.item1::before{
-    content: '\f0ce';
-    font-family:"Font Awesome 5 Free";
-    font-weight: bold;
-    margin-right: 10%;
+.img-profilo{
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 5%;
 }
 
-.item2::before{
-    content: '\f2bb';
-    font-family:"Font Awesome 5 Free";
-    font-weight: bold;
-    margin-right: 10%;
+.number{
+    position: absolute;
+    left: 17%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 30px;
+    display: none;
 }
 
-.item3::before{
-    content: '\f84c';
-    font-family:"Font Awesome 5 Free";
-    font-weight: bold;
-    margin-right: 10%;
+.item:hover .number{
+    display: block;
 }
+
+.item:hover .img-profilo{
+    opacity: 0.5;
+}
+
 
 footer
 {

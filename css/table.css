@@ -6,9 +6,14 @@ html,body{
     padding: 0;
 }
 
+.menu h1
+{
+    margin:0;
+}
+
 .menu{
     width: 100%;
-    background-color: blue;
+    background-color: #034f84;
     color: white;
     text-align: center;
     font-family: 'Lobster', cursive;
@@ -19,6 +24,11 @@ html,body{
     margin-right: 1%;
 }
 
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
 .container-table
 {
     width: 100%;
@@ -27,10 +37,7 @@ html,body{
     align-items: center;
 }
 
-/* tr:nth-child(odd) { background-color: #76b576; }
-tr:nth-child(even) { background-color: #a1ffa1; } */
 
-/* tr:nth-child(odd) { background-color: whi; } */
 tr:nth-child(even) { background-color: rgb(208, 230, 251); }
 
 table
@@ -40,9 +47,10 @@ table
     width: 50%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    margin-top: 5%;
 }
 
-tr:hover{
+.evidenzia:hover{
     background-color: yellow;
 }
 
@@ -56,7 +64,7 @@ td
     height: 40px;
     font-size: 18px;
 }
-.cella
+.id
 {
     background-color: yellow;
     padding: 4px 10px;
@@ -68,7 +76,7 @@ td
 
 footer
 {
-    background-color: blue;
+    background-color: #034f84;
     width: 100%;
     position: fixed;
     bottom: 0;
