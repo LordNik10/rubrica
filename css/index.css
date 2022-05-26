@@ -10,6 +10,8 @@ body
     align-items: center;
 }
 
+tr:nth-child(odd) { background-color: #CCCCCC; }
+
 table,th,tr,td
 {
     border: 1px solid black;
