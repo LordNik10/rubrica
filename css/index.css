@@ -58,6 +58,9 @@ html,body{
     border: 1px solid white;
     padding: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 a{
@@ -100,3 +103,10 @@ footer
     height: 50px;
     align-items: center;
 }
+
+@media all and (max-width:650px) {
+    .container-body{
+        width: 85%;
+    }
+}
+

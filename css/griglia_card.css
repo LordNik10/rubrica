@@ -53,11 +53,12 @@ html,body{
     position: relative;
 }
 
-.item:hover{
+/*Togliere commento per la versione con opacity immagine*/
+/* .item:hover{
     background-color: #92a8d1;
-}
+} */
 
-.item span label{
+.item span > div{
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 20px;
@@ -71,20 +72,30 @@ html,body{
 
 .number{
     position: absolute;
-    left: 17%;
+    background-color: #92a8d1;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 30px;
     display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+
+.number span{
+    margin-left: 15%;
 }
 
 .item:hover .number{
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
-.item:hover .img-profilo{
+/*Togliere commento per la versione con opacity immagine*/
+/* .item:hover .img-profilo{
     opacity: 0.5;
-}
+} */
 
 
 footer
@@ -100,4 +111,20 @@ footer
     font-family: 'Lobster', cursive;
     height: 50px;
     align-items: center;
+}
+
+@media all and (max-width:950px){
+    .container-body{
+        width: 80%;
+    }
+}
+
+@media all and (max-width:650px){
+    .container-body{
+        width: 100%;
+    }
+
+    .item span > div{
+        font-size: 15px;
+    }
 }
