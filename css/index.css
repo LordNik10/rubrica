@@ -17,6 +17,13 @@ html,body{
     font-family:"Font Awesome 5 Free";
     margin-right: 1%;
 }
+
+.page-title{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: #034f84;
+}
+
 .menu h1
 {
     margin:0;
@@ -31,7 +38,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .container-body{
@@ -44,6 +51,7 @@ html,body{
     align-items: center;
     justify-content: space-around;
     height: 200px;
+    border-radius: 20px;
 }
 
 .container-scelte{

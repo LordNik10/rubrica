@@ -6,6 +6,12 @@ html,body{
     padding: 0;
 }
 
+.page-title{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: #034f84;
+}
+
 .menu h1
 {
     margin:0;
@@ -47,7 +53,7 @@ table
     width: 50%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .evidenzia:hover{
