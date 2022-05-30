@@ -103,7 +103,7 @@
     margin: 0;
 }
 
-.contatti{
+.contacts{
     width: 50%;
 }
 .hobbies
@@ -111,7 +111,7 @@
     width: 40%;
 }
 
-.contatti label, .contatti a{
+.contacts label, .contacts a{
     color: white;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -171,7 +171,7 @@
         height: 640px;
         grid-template-columns: 1fr 0.5fr 0.5fr;
     }
-    .contatti{
+    .contacts{
         width: 100%;
     }
     .hobbies{

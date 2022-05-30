@@ -19,7 +19,7 @@ table
     margin-top: 3%;
 }
 
-.evidenzia:hover{
+.highlights:hover{
     background-color: yellow;
 }
 
@@ -43,20 +43,6 @@ td
     color: black;
 }
 
-footer
-{
-    background-color: #034f84;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    margin: 0;
-    display: flex;
-    color: white;
-    justify-content: center;
-    font-family: 'Lobster', cursive;
-    height: 50px;
-    align-items: center;
-}
 
 @media all and (max-width:900px) {
     table{
