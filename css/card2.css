@@ -5,7 +5,7 @@
     margin-top: 3%;
 }
 
-.container-body{
+.card{
     background-color: #92a8d1;
     width: 60%;
     height: 450px;
@@ -18,25 +18,25 @@
     padding: 20px;
 }
 
-.item1{
+.card-img{
     grid-row: 1/3;
     grid-column: 1/2;
     /* background-color: yellow;  */
 }
 
-.item2{
+.card-title{
     grid-row: 1/2;
     grid-column: 2/4;
      /* background-color: red;  */
 }
 
-.item3{
+.card-text{
     grid-row: 2/3;
     grid-column: 2/4;
      /* background-color: green;  */
 }
 
-.item4{
+.card-text2{
     grid-row: 3/4;
     grid-column: 1/4;
      /* background-color: purple;  */
@@ -47,56 +47,56 @@
     height: 115%;
 }
 
-.item2 h2{
+.card-title h2{
     font-family: 'Lobster', sans-serif;
     color: white;
 }
 
-.item2 label{
+.card-title label{
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-.item2 p,.item3 p{
+.card-title p,.card-text p{
     color: white;
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
-.item2 a{
+.card-title a{
     text-decoration: none;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-.item4 label{
+.card-text2 label{
     text-decoration: none;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-.item4 figure{
+.card-text2 figure{
     text-decoration: none;
     color: white;
     font-family: 'Roboto', sans-serif;
     width: 100%;
 }
 
-.item4{
+.card-text2{
     display: flex;
     align-items: center;
     gap: 4%;
 }
 
-.item4 span{
+.card-text2 span{
     width: 20%;
 }
 
-.item3{
+.card-text{
     display: flex;
 }
 
-.item3 h3
+.card-text h3
 {
     font-family: 'Lobster', sans-serif;
     color: white;
@@ -118,7 +118,7 @@
 }
 
 @media all and (max-width:2000px) and (min-width:1600px){
-    .container-body{
+    .card{
         grid-template-columns: 0.50fr 1fr 1fr;
     }
 }
@@ -130,13 +130,13 @@
 }
 
 @media all and (max-width:1150px){
-    .container-body{
+    .card{
         width: 75%;
     }
 }
 
 @media all and (max-width:910px){
-    .container-body{
+    .card{
         width: 90%;
     }
     audio{
@@ -149,25 +149,25 @@
 }
 
 @media all and (max-width:600px){
-    .item4{
+    .card-text2{
         flex-direction: column;
         justify-content: center;
     }
-    .item4 figure{
+    .card-text2 figure{
         margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .item3{
+    .card-text{
         font-size: 13px;
         display: flex;
         flex-direction: column;
     }
-    .item4 span{
+    .card-text2 span{
         width: 100%;
     }
-    .container-body{
+    .card{
         height: 640px;
         grid-template-columns: 1fr 0.5fr 0.5fr;
     }
@@ -182,11 +182,11 @@
 }
 
 @media all and (max-width:400px){
-    .container-body{
+    .card{
         grid-template-columns: 0.75fr 0.5fr 0.5fr;
         grid-template-rows: 0.25fr 0.5fr 1fr 1fr;
     }
-    .item1{
+    .card-img{
         grid-row: 2/3;
         grid-column: 1/4;
         display: flex;
@@ -196,17 +196,17 @@
     .imgprofilo{
         width: 60%;
     }
-    .item2{
+    .card-title{
         grid-row: 1/2;
         grid-column: 1/4;
         text-align: center;
     }
-    .item3{
+    .card-text{
         grid-row: 3/4;
         grid-column: 1/4;
         text-align: center;
     }
-    .item4{
+    .card-text2{
         grid-row: 4/5;
         grid-column: 1/4;
     }
