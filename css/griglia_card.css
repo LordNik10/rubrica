@@ -18,11 +18,16 @@
     background-color: #034f84;
     width: 80%;
     height: 50%;
+    border-radius: 15px;
+    position: relative;
+    text-decoration: none;
+}
+
+.item-body{
     display: flex;
     align-items: center;
     gap: 2%;
-    border-radius: 15px;
-    position: relative;
+    height: 100%;
 }
 
 /*Togliere commento per la versione con opacity immagine*/
