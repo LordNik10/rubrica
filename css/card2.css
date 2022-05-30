@@ -214,11 +214,23 @@ footer
     }
     .container-body{
         height: 640px;
-        grid-template-columns: 1.5fr 0.5fr 0.5fr;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+    }
+    .contatti{
+        width: 100%;
     }
     .hobbies{
-        width: 50%;
+        width: 100%;
         margin-top: 4%;
     }
 
+}
+
+@media all and (max-width:400px){
+    .imgprofilo{
+        height: 50%;
+    }
+    .container-body{
+        grid-template-columns: 0.75fr 0.5fr 0.5fr;
+    }
 }

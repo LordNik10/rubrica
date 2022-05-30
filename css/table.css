@@ -88,3 +88,9 @@ footer
     height: 50px;
     align-items: center;
 }
+
+@media all and (max-width:900px) {
+    table{
+        width: 85%;
+    }
+}
