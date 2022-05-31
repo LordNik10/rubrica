@@ -6,6 +6,13 @@ html,body{
     padding: 0;
 }
 
+.main-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 0.25fr 1fr 0.15fr;
+}
+
 .page-title{
     font-family: 'Lobster', cursive;
     text-align: center;
@@ -16,8 +23,10 @@ header{
     width: 100%;
     background-color: #034f84;
     color: white;
-    text-align: center;
     font-family: 'Lobster', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 header h1::before{
     content: '\f2b9';
@@ -37,13 +46,12 @@ footer
 {
     background-color: #034f84;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     margin: 0;
     display: flex;
     color: white;
     justify-content: center;
     font-family: 'Lobster', cursive;
-    height: 50px;
     align-items: center;
+    height: 100%;
+    grid-row: 4/5;
 }

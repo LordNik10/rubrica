@@ -63,9 +63,24 @@ a{
 }
 
 
-@media all and (max-width:650px) {
+@media all and (max-width:550px) {
     .container-body{
         width: 85%;
+        height: 350px;
+    }
+    .container-body h2{
+        font-size: 18px;
+    }
+    .container-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 80%;
+    }
+    .container-text a{
+        width: 30%;
+        margin-bottom: 4%;
     }
 }
 
