@@ -15,5 +15,60 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "person": [
+    {
+      "id":1,
+      "nome": "Niccolò",
+      "cognome": "Naso"
+    },
+
+    {
+      "id":2,
+      "nome": "Gianluca",
+      "cognome": "La Rosa"
+    },
+
+    {
+      "id":3,
+      "nome": "Marika",
+      "cognome": "Fabiani"
+    },
+
+    {
+      "id":4,
+      "nome": "Daniel",
+      "cognome": "Zotti"
+    },
+
+    {
+      "id":5,
+      "nome": "Mario",
+      "cognome": "Rossi"
+    },
+
+    {
+      "id":6,
+      "nome": "Luigi",
+      "cognome": "Bianchi"
+    },
+
+    {
+      "id":7,
+      "nome": "Giovanna",
+      "cognome": "Verdi"
+    },
+
+    {
+      "id":8,
+      "nome": "Andrea",
+      "cognome": "Burlone"
+    },
+
+    {
+      "id":9,
+      "nome": "Elena",
+      "cognome": "Marchi"
+    }
+  ]
 }
