@@ -5,7 +5,7 @@ async function chiamata(){
             console.log(data);
             const table = document.querySelector('tbody');
             
-            for (i=1;i<data.length;i++){
+            for (i=1;i<data.length+1;i++){
                 const tr = document.createElement('tr');
                 tr.className='highlights';
                 tr.id='tr'+i;
@@ -45,6 +45,8 @@ async function chiamata(){
             }
 
             document.querySelector('#research').addEventListener('keyup',search);
+            document.querySelector('#btn-add').addEventListener('click',addPerson);
+            document.getElementById('input-name').addEventListener('blur',debug);
     }catch{
         throw new Error ("Errore");
     }
@@ -74,14 +76,59 @@ let search = () => {
     let tr = document.querySelectorAll('tr');
     for (i=1;i<tr.length;i++){
         let surnameTarget = tr[i].childNodes[2].textContent+'';
-        if (!surnameTarget.includes(text.value)){
-            tr[i].style.display='none';
-        }else{
-            tr[i].style.display='table-row';
-            
-        }
+           if (!surnameTarget.includes(text.value)){
+                tr[i].style.display='none';
+            }else{
+                tr[i].style.display='table-row';
+        } 
+        
+        
     }
+}
 
+let debug = () =>{
+    let name = document.getElementById('input-name').value;
+    let surname = document.getElementById('input-surname').value;
+    console.log(name);
+    console.log(surname);
+    let person = {
+        id:10,
+        nome:name,
+        cognome:surname
+    };
+    console.log(person);
+}
+
+let addPerson = async () =>{
+    let id = document.getElementById('number-id').value;
+    let name = document.getElementById('input-name').value;
+    let surname = document.getElementById('input-surname').value;
+    let person = {
+        id: id,
+        nome: name,
+        cognome: surname
+    };
+    console.log(person);
+    try {
+        let res = await fetch(`http://localhost:3000/person`, {
+            header: {
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({
+                id: id,
+                nome: name,
+                cognome: surname
+            }),
+        }); 
+        if (res.ok) {
+            window.location.href = "http://localhost:8080/page/table.html";
+        } else {
+            throw new Error("Sorry. Couldn't Add Person.");
+        }
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 document.addEventListener('DOMContentLoaded',function(){
