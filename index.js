@@ -17,7 +17,7 @@ async function chiamata(){
                         td.classList.add='td-delete';
                     }
                     switch(j){
-                        case 0: if (td.id=='td00'){
+                        case 0: if (td.id=='td10'){
                                     a.href='./card.html';
                                 }else{
                                     a.href='#';
@@ -71,19 +71,14 @@ let deletePerson = async id => {
 
 let search = () => {
     let text = document.querySelector('#research');
-    console.log('search');
     let tr = document.querySelectorAll('tr');
-    console.log(tr);
-    console.log(tr[1].childNodes[2].textContent);
     for (i=1;i<tr.length;i++){
         let surnameTarget = tr[i].childNodes[2].textContent+'';
         if (!surnameTarget.includes(text.value)){
             tr[i].style.display='none';
-            console.log(text.value);
-            let ciao = surnameTarget.includes(text.value);
-            console.log(ciao);
         }else{
             tr[i].style.display='table-row';
+            
         }
     }
 
