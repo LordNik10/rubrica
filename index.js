@@ -46,7 +46,7 @@ async function chiamata(){
 
             document.querySelector('#research').addEventListener('keyup',search);
             document.querySelector('#btn-add').addEventListener('click',addPerson);
-            document.getElementById('input-name').addEventListener('blur',debug);
+            // document.getElementById('input-name').addEventListener('blur',debug);
     }catch{
         throw new Error ("Errore");
     }
@@ -86,19 +86,19 @@ let search = () => {
     }
 }
 
-let debug = () =>{
-    let name = document.getElementById('input-name').value;
-    let surname = document.getElementById('input-surname').value;
-    let id = document.getElementById('number-id').value;
-    console.log(name);
-    console.log(surname);
-    let person = {
-        id:id,
-        nome:name,
-        cognome:surname
-    };
-    console.log(person);
-}
+// let debug = () =>{
+//     let name = document.getElementById('input-name').value;
+//     let surname = document.getElementById('input-surname').value;
+//     let id = document.getElementById('number-id').value;
+//     console.log(name);
+//     console.log(surname);
+//     let person = {
+//         id:id,
+//         nome:name,
+//         cognome:surname
+//     };
+//     console.log(person);
+// }
 
 let addPerson = async () =>{
     let id = document.getElementById('number-id').value;
