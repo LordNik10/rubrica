@@ -1,4 +1,4 @@
-async function chiamata(){
+async function buildTable(){
     try {
             const response = await fetch("http://localhost:3000/person");
             const data = await response.json();
@@ -46,14 +46,14 @@ async function chiamata(){
 
             document.querySelector('#research').addEventListener('keyup',search);
             document.querySelector('#btn-add').addEventListener('click',addPerson);
-            // document.getElementById('input-name').addEventListener('blur',debug);
     }catch{
         throw new Error ("Errore");
     }
     
 }
 
-let deletePerson = async id => {
+async function deletePerson(id){
+    console.log('entro dentro deletePerson');
     try {
         let res = await fetch(`http://localhost:3000/person/${id}`, {
             headers: {
@@ -62,7 +62,8 @@ let deletePerson = async id => {
             method: "DELETE",
         });
         if (res.ok) {
-            window.location.href = "http://localhost:8080/page/table.html";
+            let tr = document.getElementById('tr'+id);
+            tr.remove();
         } else {
             throw new Error("Sorry. Couldn't delete.");
         }
@@ -71,7 +72,7 @@ let deletePerson = async id => {
     }
 };
 
-let search = () => {
+function search(){
     let text = document.querySelector('#research');
     let tr = document.querySelectorAll('tr');
     for (i=1;i<tr.length;i++){
@@ -86,25 +87,11 @@ let search = () => {
     }
 }
 
-// let debug = () =>{
-//     let name = document.getElementById('input-name').value;
-//     let surname = document.getElementById('input-surname').value;
-//     let id = document.getElementById('number-id').value;
-//     console.log(name);
-//     console.log(surname);
-//     let person = {
-//         id:id,
-//         nome:name,
-//         cognome:surname
-//     };
-//     console.log(person);
-// }
-
-let addPerson = async () =>{
-    let id = document.getElementById('number-id').value;
-    let name = document.getElementById('input-name').value;
-    let surname = document.getElementById('input-surname').value;
-    let person = {
+async function addPerson(){
+    const id = document.getElementById('number-id').value;
+    const name = document.getElementById('input-name').value;
+    const surname = document.getElementById('input-surname').value;
+    const person = {
         id: id,
         nome: name,
         cognome: surname
@@ -119,7 +106,38 @@ let addPerson = async () =>{
             body: JSON.stringify(person),
         }); 
         if (res.ok) {
-            window.location.href = "http://localhost:8080/page/table.html";
+            const table = document.querySelector('tbody');
+            const tr = document.createElement('tr');
+            tr.className='highlights';
+            tr.id='tr'+person.id;
+            for (i=0;i<3;i++){
+              let td = document.createElement('td'); 
+              td.id= 'td'+tr.id+''+i;
+
+              const a = document.createElement('a');
+              switch (i) {
+                    case 0:
+                        a.href='#'
+                        a.textContent=person.id;
+                        a.className='id';
+                        td.appendChild(a);
+                        break;
+                    case 1:
+                        td.textContent = person.nome;
+                        break;
+                    case 2:
+                        td.textContent=person.cognome;
+                        td.innerHTML+="<i class='fas fa-trash delete'></i>";
+                        break;
+              }
+              tr.appendChild(td);
+            }
+
+            table.appendChild(tr);
+
+            const deleteIcon = document.getElementsByTagName('i');
+            deleteIcon[deleteIcon.length-1].addEventListener('click',deletePerson.bind(null,person.id));
+            
         } else {
             throw new Error("Sorry. Couldn't Add Person.");
         }
@@ -129,5 +147,5 @@ let addPerson = async () =>{
 }
 
 document.addEventListener('DOMContentLoaded',function(){
-    chiamata();
+    buildTable();
 })
