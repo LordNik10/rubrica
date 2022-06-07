@@ -51,7 +51,9 @@ tr:hover .delete{
 .highlights:hover{
     background-color: yellow;
 }
-
+.input-border:focus{
+    border: 2px solid rgb(208, 230, 251);
+}
 th
 {
     font-size: 25px;
