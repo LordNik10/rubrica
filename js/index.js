@@ -94,9 +94,13 @@ function search(){
 }
 
 async function addPerson(){
-    const id = document.getElementById('number-id').value;
-    const name = document.getElementById('input-name').value;
-    const surname = document.getElementById('input-surname').value;
+    let id = document.getElementById('number-id').value;
+    let name = document.getElementById('input-name').value;
+    let surname = document.getElementById('input-surname').value;
+    if (id=="" || name=="" || surname==""){
+        alert('Compilare tutti i campi');
+        return;
+    }
     const person = {
         id: id,
         nome: name,
@@ -150,6 +154,9 @@ async function addPerson(){
     } catch (err) {
         console.error(err);
     }
+    document.getElementById('number-id').value="";
+    document.getElementById('input-name').value="";
+    document.getElementById('input-surname').value="";
 }
 
 document.addEventListener('DOMContentLoaded',function(){
