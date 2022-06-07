@@ -56,7 +56,7 @@ async function chiamata(){
 let deletePerson = async id => {
     try {
         let res = await fetch(`http://localhost:3000/person/${id}`, {
-            header: {
+            headers: {
                 "Content-Type": "application/json",
             },
             method: "DELETE",
@@ -89,10 +89,11 @@ let search = () => {
 let debug = () =>{
     let name = document.getElementById('input-name').value;
     let surname = document.getElementById('input-surname').value;
+    let id = document.getElementById('number-id').value;
     console.log(name);
     console.log(surname);
     let person = {
-        id:10,
+        id:id,
         nome:name,
         cognome:surname
     };
@@ -111,15 +112,11 @@ let addPerson = async () =>{
     console.log(person);
     try {
         let res = await fetch(`http://localhost:3000/person`, {
-            header: {
+            headers: {
                 "Content-Type": "application/json",
             },
             method: "POST",
-            body: JSON.stringify({
-                id: id,
-                nome: name,
-                cognome: surname
-            }),
+            body: JSON.stringify(person),
         }); 
         if (res.ok) {
             window.location.href = "http://localhost:8080/page/table.html";
