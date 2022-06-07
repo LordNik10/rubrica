@@ -55,12 +55,18 @@ async function buildTable(){
 async function deletePerson(id){
     console.log('entro dentro deletePerson');
     try {
-        let res = await fetch(`http://localhost:3000/person/${id}`, {
+        let res;
+        if (confirm('Sicuro di eliminare la persona selezionata?')){
+            res = await fetch(`http://localhost:3000/person/${id}`, {
             headers: {
                 "Content-Type": "application/json",
             },
             method: "DELETE",
         });
+        }else{
+            return;
+        }
+        
         if (res.ok) {
             let tr = document.getElementById('tr'+id);
             tr.remove();
