@@ -1,8 +1,8 @@
 async function buildTable(){
     try {
-            const contactList = getContactList();
+            const contactList = await getContactList();
             console.log(contactList);
-            const table = document.querySelector('tbody');
+            const table = document.querySelector('.contact-list');
             
             for (i=1;i<contactList.length+1;i++){
                 const tr = document.createElement('tr');
