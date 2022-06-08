@@ -6,7 +6,7 @@ async function buildTable(){
             
             for (i=1;i<contactList.length+1;i++){
                 const tr = document.createElement('tr');
-                tr.className='highlights';
+                tr.className='contact-row-selected';
                 tr.id='tr'+i;
                 for (j=0;j<3;j++){
                     const td = document.createElement('td');

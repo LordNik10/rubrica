@@ -55,7 +55,7 @@ tr:hover .delete{
     position: absolute;
 } */
 
-.highlights:hover{
+.contact-row-selected:hover{
     background-color: yellow;
 }
 
