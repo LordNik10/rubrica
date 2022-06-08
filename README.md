@@ -22,7 +22,7 @@ The table.html is a table where there are all the user's contacts. In this page 
 The card.html contains all the information about a specific contact. Such as his profile image, hobbies, telephon number, email and favourite video
 
 ## Grid.html
-The grid.html contains all the contacts display in a grid format
+The grid.html contains all the contacts shown in a grid format
 
 # How to start the project
 First of all you need to follow these steps to run the project:
