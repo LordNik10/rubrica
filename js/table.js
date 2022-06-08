@@ -4,10 +4,13 @@ async function buildTable(){
             console.log(contactList);
             const table = document.querySelector('#contact-list-container');
             
-            for (i=1;i<contactList.length+1;i++){
+            for (i=0;i<contactList.length;i++){
+                const contact = contactList[i];
+                
                 const tr = document.createElement('tr');
                 tr.className='contact-row-selected';
-                tr.id='tr'+i;
+                tr.id='contact_'+contact.id;
+                console.log(contact);
                 for (j=0;j<3;j++){
                     const td = document.createElement('td');
                     td.id='td'+i+j;
@@ -22,14 +25,14 @@ async function buildTable(){
                                     a.href='#';
                                 }
 
-                                a.textContent=contactList[i-1].id;
+                                a.textContent=contact.id;
                                 a.classList.add('id');
                                 td.appendChild(a);
                                 break;
                                 
-                        case 1: td.textContent=contactList[i-1].nome;
+                        case 1: td.textContent=contact.nome;
                                 break;
-                        case 2: td.textContent=contactList[i-1].cognome;
+                        case 2: td.textContent=contact.cognome;
                                 td.innerHTML+="<i class='fas fa-trash delete'></i>";
                                 break;
                     }
@@ -67,7 +70,7 @@ async function deletePerson(id){
         }
         
         if (res.ok) {
-            let tr = document.getElementById('tr'+id);
+            let tr = document.getElementById('contact_'+id);
             tr.remove();
         } else {
             throw new Error("Sorry. Couldn't delete.");
@@ -117,8 +120,8 @@ async function addPerson(){
         if (res.ok) {
             const table = document.querySelector('tbody');
             const tr = document.createElement('tr');
-            tr.className='highlights';
-            tr.id='tr'+person.id;
+            tr.className='contact-row-selected';
+            tr.id='contact_'+person.id;
             for (i=0;i<3;i++){
               let td = document.createElement('td'); 
               td.id= 'td'+tr.id+''+i;
