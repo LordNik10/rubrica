@@ -28,18 +28,19 @@ header{
     align-items: center;
     justify-content: center;
 }
-header h1::before{
+header .website-name::before{
     content: '\f2b9';
     font-family:"Font Awesome 5 Free";
     margin-right: 1%;
 }
-header h1
+/* header h1
 {
     margin:0;
-}
-header a{
+} */
+.website-name{
     text-decoration: none;
     color: white;
+    font-size: 35px;
 }
 
 footer
