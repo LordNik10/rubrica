@@ -77,8 +77,23 @@ tr{
 
 .add-person{
     margin-bottom: 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
 }
-
+.title-addPerson{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 1%;
+}
+.btn-add{
+    background-color: rgb(208, 230, 251);
+    border: none;
+    height: 30px;
+    width: 10%;
+}
 @media all and (max-width:900px) {
     table{
         width: 85%;
