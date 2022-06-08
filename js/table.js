@@ -2,7 +2,7 @@ async function buildTable(){
     try {
             const contactList = await getContactList();
             console.log(contactList);
-            const table = document.querySelector('.contact-list');
+            const table = document.querySelector('#contact-list-container');
             
             for (i=1;i<contactList.length+1;i++){
                 const tr = document.createElement('tr');
