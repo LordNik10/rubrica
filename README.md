@@ -19,13 +19,13 @@ The table.html is a table where there are all the user's contacts. In this page 
 * Delete a specific contact pressing the "trash button"
 
 ## Card.html
-The card.html contain all the information about a specific contact. Such as his profile image, his hobbies, his telephon number, his email and his favourite video
+The card.html contains all the information about a specific contact. Such as his profile image, hobbies, telephon number, email and favourite video
 
 ## Grid.html
-The grid.html contain all the contacts display in a grid format
+The grid.html contains all the contacts display in a grid format
 
 # How to start the project
-First of all you need to follow these step to run the project:
+First of all you need to follow these steps to run the project:
 * install http-server with `npm install -g http-server`
 * install json-server with `npm install -g json-server`
 * run http-server with `http-server .`
