@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubrica | Table</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="icon" type="image/x-icon" href="../media/address-book-solid.svg">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/table.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubrica | Table</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="icon" type="image/x-icon" href="../media/address-book-solid.svg">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/table.css">
 </head>
 <body>
-    <div class="main-container">
-        <header>
-            <h1><a href="../index.html">Rubrica</a></h1>
-        </header>
-        <h1 class="page-title">Rubric's Table</h1>
-        <section class="container-table">
-            <input type="text" id="research" class="container-research" placeholder="Ricerca persona">
-            <label>Aggiungi persona</label>
-            <div class="add-person">
-                <input type="number" id="number-id" placeholder="ID">
-                <input type="text" id="input-name" placeholder="Nome">
-                <input type="text" id="input-surname" placeholder="Cognome">
-                <button type="submit" id="btn-add" class="btn-add">Aggiungi</button>
-            </div>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Cognome</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-                
-            </table>
-        </section>
-    
-        <footer>
-            Rubrica di Niccolò
-        </footer>
+<div class="main-container">
+  <header>
+    <a class="website-name" href="../index.html">Rubrica</a>
+  </header>
+  <h1 class="page-title">Rubric's Table</h1>
+  <section class="container-table">
+    <input type="text" id="research" class="container-research" placeholder="Ricerca persona">
+    <label>Aggiungi persona</label>
+    <div class="add-person">
+      <input type="number" id="number-id" placeholder="ID">
+      <input type="text" id="input-name" placeholder="Nome">
+      <input type="text" id="input-surname" placeholder="Cognome">
+      <button type="submit" id="btn-add" class="btn-add">Aggiungi</button>
     </div>
-    <script src="../js/index.js"></script>
+
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+      </tr>
+      </thead>
+      <tbody id="contact-rows-container">
+      <!--<tr id="contact_1" class="contact-row">
+        <td class="contact-id">1</td>
+        <td class="contact-name">Daniel</td>
+        <td class="contact-surname">Zotti <button data-contact-id="1"><i class="fa fa-trash"></i></button></td>
+      </tr>-->
+      </tbody>
+
+    </table>
+  </section>
+
+  <footer>
+    Rubrica di Niccolò
+  </footer>
+</div>
+<script src="../js/api.js"></script>
+<script src="../js/table.js"></script>
 </body>
 </html>

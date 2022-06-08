@@ -1,31 +1,11 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "person": [
     {
       "id": 1,
       "nome": "Niccolò",
-      "cognome": "Naso"
-    },
-    {
-      "id": 2,
-      "nome": "Gianluca",
-      "cognome": "La Rosa"
+      "cognome": "Naso",
+      "hobbies": [],
+      "favouriteVideo": "https://youtube.com?v=12weklndasdk"
     },
     {
       "id": 3,
@@ -50,17 +30,16 @@
     {
       "id": 7,
       "nome": "Giovanna",
-      "cognome": "Verdi"
+      "cognome": "\uD83D\uDCA9"
     },
     {
       "id": 8,
-      "nome": "Andrea",
-      "cognome": "Burlone"
+      "nome": "Andrea ha un nome lunghissimo",
+      "cognome": "Burlone dal cognome davvero davvero lunghissimo"
     },
     {
       "id": 9,
-      "nome": "Elena",
-      "cognome": "Marchi"
+      "nome": "Elena"
     }
   ]
 }
