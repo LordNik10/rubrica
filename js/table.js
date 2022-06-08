@@ -1,11 +1,10 @@
 async function buildTable(){
     try {
-            const response = await fetch("http://localhost:3000/person");
-            const data = await response.json();
-            console.log(data);
+            const contactList = getContactList();
+            console.log(contactList);
             const table = document.querySelector('tbody');
             
-            for (i=1;i<data.length+1;i++){
+            for (i=1;i<contactList.length+1;i++){
                 const tr = document.createElement('tr');
                 tr.className='highlights';
                 tr.id='tr'+i;
@@ -23,14 +22,14 @@ async function buildTable(){
                                     a.href='#';
                                 }
 
-                                a.textContent=data[i-1].id;
+                                a.textContent=contactList[i-1].id;
                                 a.classList.add('id');
                                 td.appendChild(a);
                                 break;
                                 
-                        case 1: td.textContent=data[i-1].nome;
+                        case 1: td.textContent=contactList[i-1].nome;
                                 break;
-                        case 2: td.textContent=data[i-1].cognome;
+                        case 2: td.textContent=contactList[i-1].cognome;
                                 td.innerHTML+="<i class='fas fa-trash delete'></i>";
                                 break;
                     }
@@ -41,7 +40,7 @@ async function buildTable(){
             let removeTr = document.getElementsByTagName('i');
             console.log(removeTr);
             for(i=0;i<removeTr.length;i++){
-                removeTr[i].addEventListener('click',deletePerson.bind(null,data[i].id));
+                removeTr[i].addEventListener('click',deletePerson.bind(null,contactList[i].id));
             }
 
             document.querySelector('#research').addEventListener('keyup',search);
