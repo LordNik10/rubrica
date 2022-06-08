@@ -33,14 +33,20 @@ header .website-name::before{
     font-family:"Font Awesome 5 Free";
     margin-right: 1%;
 }
-/* header h1
-{
-    margin:0;
-} */
+
 .website-name{
     text-decoration: none;
     color: white;
     font-size: 35px;
+}
+
+.btn-icon{
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer

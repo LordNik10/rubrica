@@ -6,10 +6,17 @@
     flex-direction: column;
 }
 
-.container-research{
+.input-research{
     margin-bottom: 2%;
     height: 25px;
 }
+
+.input-container::before{
+    content: '\f002';
+    font-family:"Font Awesome 5 Free";
+    font-weight: bold;
+}
+
 tr:nth-child(odd) { background-color: rgb(208, 230, 251); }
 th{
     background-color: white;
@@ -90,9 +97,10 @@ tr{
 }
 .btn-add{
     background-color: rgb(208, 230, 251);
-    border: none;
+    border: 1px solid;
     height: 30px;
     width: 10%;
+    cursor: pointer;
 }
 @media all and (max-width:900px) {
     table{

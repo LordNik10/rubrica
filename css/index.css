@@ -18,7 +18,7 @@
     border-radius: 20px;
 }
 
-.container-text{
+.container-pages{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -26,35 +26,26 @@
     width: 100%;
 }
 
-.border-class{
-    border: 1px solid white;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a{
+.container-pages a{
     color: white;
     text-decoration: none;
 }
 
-.item1::before{
+.table::before{
     content: '\f0ce';
     font-family:"Font Awesome 5 Free";
     font-weight: bold;
     margin-right: 10%;
 }
 
-.item2::before{
+.card::before{
     content: '\f2bb';
     font-family:"Font Awesome 5 Free";
     font-weight: bold;
     margin-right: 10%;
 }
 
-.item3::before{
+.card-grid::before{
     content: '\f84c';
     font-family:"Font Awesome 5 Free";
     font-weight: bold;
@@ -70,14 +61,14 @@ a{
     .container-body h2{
         font-size: 18px;
     }
-    .container-text{
+    .container-links{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         height: 80%;
     }
-    .container-text a{
+    .container-pages a{
         width: 30%;
         margin-bottom: 4%;
     }
