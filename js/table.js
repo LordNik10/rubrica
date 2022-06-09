@@ -25,12 +25,12 @@ async function createRowContanct(contact){
                 const surnamePerson = document.createElement('td');
                 surnamePerson.textContent=contact.cognome;
                 console.log('eccomi');
-                surnamePerson.innerHTML+="<button><i class='fas fa-trash delete btn-icon'></i></button>";
+                surnamePerson.innerHTML+="<button type='submit'><i class='fas fa-trash delete btn-icon'></i></button>";
                 
                 tr.appendChild(idPerson);
                 tr.appendChild(namePerson);
                 tr.appendChild(surnamePerson);
-
+                console.log(tr);
                 // contactContainer.appendChild(tr);
             // }
             return tr
