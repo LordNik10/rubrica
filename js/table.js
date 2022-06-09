@@ -102,20 +102,26 @@ async function deletePerson(id){
     }
 };
 
+
 function search(){
+    let surname = document.querySelector('#research');
+    let rowContact = document.querySelectorAll('tr');
+    let contactTarget = [];
+
+    
+}
+
+function searchOld(){
     let text = document.querySelector('#research');
     let tr = document.querySelectorAll('tr');
     for (i=1;i<tr.length;i++){
         let surnameTarget = tr[i].childNodes[2].textContent+'';
            if (!surnameTarget.toLocaleLowerCase().includes(text.value.toLocaleLowerCase())){
-                // tr[i].style.display='none';
-                document.querySelector('#contact-list-container').innerHTML="";
+                tr[i].style.display='none';
                 
             }else{
                 tr[i].style.display='table-row';
         } 
-        
-        
     }
 }
 
