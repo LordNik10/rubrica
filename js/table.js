@@ -15,8 +15,8 @@ async function buildTable(){
                 const idPerson = document.createElement('td');
                 idPerson.id='contact-id';
                 const contactLink = document.createElement('a');
-                
-
+                contactLink.className='contact-id-style';
+                contactLink.href='../page';
 
                 const namePerson = document.createElement('td');
                 const surnamePerson = document.createElement('td');
