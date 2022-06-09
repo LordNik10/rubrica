@@ -60,6 +60,8 @@ async function buildTable(){
         deleteButtons.forEach(deleteButton => {
             deleteButton.addEventListener('click',deleteClick);
         });
+
+        document.querySelector('#research').addEventListener('keyup',search);
     } catch {
         throw new Error('errore');
     }
@@ -105,8 +107,10 @@ function search(){
     let tr = document.querySelectorAll('tr');
     for (i=1;i<tr.length;i++){
         let surnameTarget = tr[i].childNodes[2].textContent+'';
-           if (!surnameTarget.includes(text.value)){
-                tr[i].style.display='none';
+           if (!surnameTarget.toLocaleLowerCase().includes(text.value.toLocaleLowerCase())){
+                // tr[i].style.display='none';
+                document.querySelector('#contact-list-container').innerHTML="";
+                
             }else{
                 tr[i].style.display='table-row';
         } 
