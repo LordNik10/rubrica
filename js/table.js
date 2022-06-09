@@ -2,7 +2,7 @@ async function buildTable(){
     try {
             const contactList = await getContactList();
             console.log(contactList);
-            const table = document.querySelector('#contact-list-container');
+            const contactContainer = document.querySelector('#contact-list-container');
             
             for (i=0;i<contactList.length;i++){
                 const contact = contactList[i];
@@ -11,46 +11,27 @@ async function buildTable(){
                 tr.className='contact-row-selected';
                 tr.id='contact_'+contact.id;
                 console.log(contact);
-
+                
                 const idPerson = document.createElement('td');
                 idPerson.id='contact-id';
                 const contactLink = document.createElement('a');
                 contactLink.className='contact-id-style';
-                contactLink.href='../page';
-
-                const namePerson = document.createElement('td');
-                const surnamePerson = document.createElement('td');
-
+                contactLink.href=`../page/card.html?id=${contact.id}`;
+                contactLink.textContent=contact.id;
+                idPerson.appendChild(contactLink);
                 
+                const namePerson = document.createElement('td');
+                namePerson.textContent=contact.nome;
+                
+                const surnamePerson = document.createElement('td');
+                surnamePerson.textContent=contact.cognome;
+                surnamePerson.innerHTML+="<i class='fas fa-trash delete'></i>";
+                
+                tr.appendChild(idPerson);
+                tr.appendChild(namePerson);
+                tr.appendChild(surnamePerson);
 
-                for (j=0;j<3;j++){
-                    const td = document.createElement('td');
-                    td.id='td'+i+j;
-                    const a = document.createElement('a');
-                    if(j==2){
-                        td.classList.add='td-delete';
-                    }
-                    switch(j){
-                        case 0: if (td.id=='td10'){
-                                    a.href='./card.html';
-                                }else{
-                                    a.href='#';
-                                }
-
-                                a.textContent=contact.id;
-                                a.classList.add('id');
-                                td.appendChild(a);
-                                break;
-                                
-                        case 1: td.textContent=contact.nome;
-                                break;
-                        case 2: td.textContent=contact.cognome;
-                                td.innerHTML+="<i class='fas fa-trash delete'></i>";
-                                break;
-                    }
-                    tr.appendChild(td)
-                }
-                table.appendChild(tr);
+                contactContainer.appendChild(tr);
             }
             let removeTr = document.getElementsByTagName('i');
             console.log(removeTr);
