@@ -1,4 +1,4 @@
-async function createRowContanct(contact){
+function createRowContanct(contact){
             // const contactList = await getContactList();
             // console.log(contactList);
             // const contactContainer = document.querySelector('#contact-list-container');
@@ -25,7 +25,7 @@ async function createRowContanct(contact){
                 const surnamePerson = document.createElement('td');
                 surnamePerson.textContent=contact.cognome;
                 console.log('eccomi');
-                surnamePerson.innerHTML+="<button type='submit'><i class='fas fa-trash delete btn-icon'></i></button>";
+                surnamePerson.innerHTML+="<button type='submit' class='delete btn-icon'><i class='fas fa-trash'></i></button>";
                 
                 tr.appendChild(idPerson);
                 tr.appendChild(namePerson);
