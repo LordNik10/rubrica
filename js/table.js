@@ -1,8 +1,7 @@
-async function buildTable(){
-    try {
-            const contactList = await getContactList();
-            console.log(contactList);
-            const contactContainer = document.querySelector('#contact-list-container');
+async function createRowContanct(contact){
+            // const contactList = await getContactList();
+            // console.log(contactList);
+            // const contactContainer = document.querySelector('#contact-list-container');
             
             for (i=0;i<contactList.length;i++){
                 const contact = contactList[i];
@@ -31,19 +30,18 @@ async function buildTable(){
                 tr.appendChild(namePerson);
                 tr.appendChild(surnamePerson);
 
-                contactContainer.appendChild(tr);
+                // contactContainer.appendChild(tr);
             }
-            let removeTr = document.getElementsByTagName('i');
-            console.log(removeTr);
-            for(i=0;i<removeTr.length;i++){
-                removeTr[i].addEventListener('click',deletePerson.bind(null,contactList[i].id));
-            }
+            return tr
+            // let removeTr = document.getElementsByTagName('i');
+            // console.log(removeTr);
+            // for(i=0;i<removeTr.length;i++){
+            //     removeTr[i].addEventListener('click',deletePerson.bind(null,contactList[i].id));
+            // }
 
-            document.querySelector('#research').addEventListener('keyup',search);
-            document.querySelector('#btn-add').addEventListener('click',addPerson);
-    }catch{
-        throw new Error ("Errore");
-    }
+            // document.querySelector('#research').addEventListener('keyup',search);
+            // document.querySelector('#btn-add').addEventListener('click',addPerson);
+
     
 }
 
