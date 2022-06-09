@@ -45,8 +45,19 @@ async function createRowContanct(contact){
 }
 
 async function buildTable(){
-    const contactList = await getContactList();
+    try {
+        const contactList = await getContactList();
+        const containerTable = document.querySelector('#contact-list-container');
+        console.log(containerTable);
+        for (let i=0;i<contactList.length;i++){
+            let contact = contactList[i];
 
+            containerTable.appendChild(createRowContanct(contact));
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    
     
 }
 
