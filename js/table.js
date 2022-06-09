@@ -13,6 +13,11 @@ async function buildTable(){
                 console.log(contact);
 
                 const idPerson = document.createElement('td');
+                idPerson.id='contact-id';
+                const contactLink = document.createElement('a');
+                
+
+
                 const namePerson = document.createElement('td');
                 const surnamePerson = document.createElement('td');
 
