@@ -71,6 +71,7 @@ function deleteClick(event){
     const id = event.target.getAttribute('data-contact-id');
     console.log(id);
     deletePerson(id);
+    // se clicco sul button funziona, se clicco sull'immagine no
 }
 
 async function deletePerson(id){
