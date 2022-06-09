@@ -44,10 +44,10 @@ function createRowContanct(contact){
             // document.querySelector('#research').addEventListener('keyup',search);
             // document.querySelector('#btn-add').addEventListener('click',addPerson);
 }
-
+let contactList;
 async function buildTable(){
     try {
-        const contactList = await getContactList();
+        contactList = await getContactList();
         const containerTable = document.querySelector('#contact-list-container');
         for (let i=0;i<contactList.length;i++){
             const contact = contactList[i];
@@ -104,10 +104,11 @@ async function deletePerson(id){
 
 
 function search(){
-    let surname = document.querySelector('#research');
+    let surname = document.querySelector('#research').value;
     let rowContact = document.querySelectorAll('tr');
-    let contactTarget = [];
+    let contactTargets = contactList.filter(contact => contact.cognome.toLocaleLowerCase().startWith(surname.toLocaleLowerCase()));
 
+    contactTargets.forEach(contact => createRowContanct(contact));
     
 }
 
