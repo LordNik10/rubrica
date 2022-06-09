@@ -11,6 +11,13 @@ async function buildTable(){
                 tr.className='contact-row-selected';
                 tr.id='contact_'+contact.id;
                 console.log(contact);
+
+                const idPerson = document.createElement('td');
+                const namePerson = document.createElement('td');
+                const surnamePerson = document.createElement('td');
+
+                
+
                 for (j=0;j<3;j++){
                     const td = document.createElement('td');
                     td.id='td'+i+j;
