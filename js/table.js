@@ -23,6 +23,7 @@ function createRowContanct(contact){
                 namePerson.textContent=contact.nome;
                 
                 const surnamePerson = document.createElement('td');
+                surnamePerson.className='contact-surname';
                 surnamePerson.textContent=contact.cognome;
                 console.log('eccomi');
                 surnamePerson.innerHTML+="<button type='submit' class='delete btn-icon'><i class='fas fa-trash'></i></button>";
@@ -48,7 +49,7 @@ async function buildTable(){
     try {
         const contactList = await getContactList();
         console.log(contactList);
-        const containerTable = document.getElementById('contact-list-container');
+        const containerTable = document.querySelector('#contact-list-container');
         console.log(containerTable);
         for (let i=0;i<contactList.length;i++){
             console.log('for buildtable: '+i);
@@ -56,6 +57,9 @@ async function buildTable(){
 
             containerTable.appendChild(createRowContanct(contact));
         }
+
+        document.querySelectorAll('.contact-id-style').addEventListener('click',deletePerson())
+
     } catch {
         throw new Error('errore');
     }
