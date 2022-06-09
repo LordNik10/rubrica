@@ -33,7 +33,7 @@ async function createRowContanct(contact){
                 console.log(tr);
                 // contactContainer.appendChild(tr);
             // }
-            return tr
+            return tr;
             // let removeTr = document.getElementsByTagName('i');
             // console.log(removeTr);
             // for(i=0;i<removeTr.length;i++){
@@ -48,9 +48,10 @@ async function buildTable(){
     try {
         const contactList = await getContactList();
         console.log(contactList);
-        const containerTable = document.querySelector('#contact-list-container');
+        const containerTable = document.getElementById('contact-list-container');
         console.log(containerTable);
         for (let i=0;i<contactList.length;i++){
+            console.log('for buildtable: '+i);
             const contact = contactList[i];
 
             containerTable.appendChild(createRowContanct(contact));
