@@ -48,23 +48,28 @@ function createRowContanct(contact){
 async function buildTable(){
     try {
         const contactList = await getContactList();
-        console.log(contactList);
         const containerTable = document.querySelector('#contact-list-container');
-        console.log(containerTable);
         for (let i=0;i<contactList.length;i++){
-            console.log('for buildtable: '+i);
             const contact = contactList[i];
 
             containerTable.appendChild(createRowContanct(contact));
         }
 
-        document.querySelectorAll('.contact-id-style').addEventListener('click',deletePerson())
-
+        const deleteButtons = document.querySelectorAll('.delete');
+        console.log(deleteButtons);
+        deleteButtons.forEach(deleteButton => {
+            deleteButton.addEventListener('click',deleteClick);
+        });
     } catch {
         throw new Error('errore');
     }
-    
-    
+}
+
+function deleteClick(event){
+    event.preventDefault();
+    const id = event.target.getAttribute('delete');
+    console.log(id);
+    deletePerson(id);
 }
 
 async function deletePerson(id){
