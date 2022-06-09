@@ -26,7 +26,7 @@ function createRowContanct(contact){
                 surnamePerson.className='contact-surname';
                 surnamePerson.textContent=contact.cognome;
                 console.log('eccomi');
-                surnamePerson.innerHTML+=`<button type='submit' data-contact-id="${ contact.id }"class='delete btn-icon'><i class='fas fa-trash'></i></button>`;
+                surnamePerson.innerHTML+=`<button data-contact-id="${ contact.id }"class='delete btn-icon'><i class='fas fa-trash'></i></button>`;
                 
                 tr.appendChild(idPerson);
                 tr.appendChild(namePerson);
@@ -66,6 +66,7 @@ async function buildTable(){
 }
 
 function deleteClick(event){
+    console.log(event);
     event.preventDefault();
     const id = event.target.getAttribute('data-contact-id');
     console.log(id);
