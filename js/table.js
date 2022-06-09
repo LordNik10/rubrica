@@ -3,8 +3,8 @@ async function createRowContanct(contact){
             // console.log(contactList);
             // const contactContainer = document.querySelector('#contact-list-container');
             
-            for (i=0;i<contactList.length;i++){
-                const contact = contactList[i];
+            // for (i=0;i<contactList.length;i++){
+                // const contact = contactList[i];
                 
                 const tr = document.createElement('tr');
                 tr.className='contact-row-selected';
@@ -24,14 +24,15 @@ async function createRowContanct(contact){
                 
                 const surnamePerson = document.createElement('td');
                 surnamePerson.textContent=contact.cognome;
-                surnamePerson.innerHTML+="<i class='fas fa-trash delete'></i>";
+                console.log('eccomi');
+                surnamePerson.innerHTML+="<button><i class='fas fa-trash delete btn-icon'></i></button>";
                 
                 tr.appendChild(idPerson);
                 tr.appendChild(namePerson);
                 tr.appendChild(surnamePerson);
 
                 // contactContainer.appendChild(tr);
-            }
+            // }
             return tr
             // let removeTr = document.getElementsByTagName('i');
             // console.log(removeTr);
@@ -41,6 +42,10 @@ async function createRowContanct(contact){
 
             // document.querySelector('#research').addEventListener('keyup',search);
             // document.querySelector('#btn-add').addEventListener('click',addPerson);
+}
+
+async function buildTable(){
+    const contactList = await getContactList();
 
     
 }
