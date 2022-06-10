@@ -26,6 +26,7 @@
 .card-title{
     grid-row: 1/2;
     grid-column: 2/4;
+    position: relative;
      /* background-color: red;  */
 }
 
@@ -126,6 +127,34 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
+.modify-contact{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.btn-modifica{
+    cursor: pointer;
+    background-color: #034f84;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.icon::before{
+    content: '\f303';
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    margin-right: 4%;
+}
+.video-style{
+    width: 200px;
+}
+
+.modForm{
+    width: 60%;
+    height: 1200px;
+    background-color: #92a8d1;
+    position: relative;
+}
 
 @media all and (max-width:2000px) and (min-width:1600px){
     .card{
@@ -152,7 +181,7 @@
     audio{
         width: 160px;
     }
-    video{
+    .video-style{
         width: 150px;
     }
     
@@ -230,5 +259,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .modForm{
+        width: 80%;
     }
 }
