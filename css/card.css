@@ -94,6 +94,7 @@
 
 .card-text{
     display: flex;
+    gap: 5%;
 }
 
 .card-text h3
@@ -109,6 +110,15 @@
 .hobbies
 {
     width: 40%;
+}
+.list-hobbies{
+    padding-left: 10px;
+}
+
+.list-hobbies li{
+    list-style: url('../media/angle-right-solid.svg');
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contacts label, .contacts a{
@@ -174,14 +184,11 @@
     .contacts{
         width: 100%;
     }
-    .hobbies{
-        width: 100%;
-        margin-top: 4%;
-    }
+    
 
 }
 
-@media all and (max-width:400px){
+@media all and (max-width:450px){
     .card{
         grid-template-columns: 0.75fr 0.5fr 0.5fr;
         grid-template-rows: 0.25fr 0.5fr 1fr 1fr;
@@ -204,10 +211,24 @@
     .card-text{
         grid-row: 3/4;
         grid-column: 1/4;
-        text-align: center;
     }
     .card-text2{
         grid-row: 4/5;
         grid-column: 1/4;
+    }
+    .card{
+        height: 750px;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+    }
+    .contacts{
+        text-align: center;
+    }
+    .hobbies{
+        width: 100%;
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

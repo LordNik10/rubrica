@@ -59,7 +59,6 @@ async function buildTable(){
 }
 
 function deleteClick(event,deleteButton){
-    console.log(event);
     event.preventDefault();
     const id = deleteButton.getAttribute('data-contact-id');
     deletePerson(id);
@@ -84,7 +83,6 @@ async function deletePerson(id){
 
 
 function search(){
-    console.log(contactList);
     let surname = document.querySelector('#research').value;
     let contactTargets = contactList.filter(contact => contact.cognome.toLowerCase().startsWith(surname.toLowerCase()));
 

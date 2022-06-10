@@ -61,7 +61,7 @@
     .container-body h2{
         font-size: 18px;
     }
-    .container-links{
+    .container-pages{
         display: flex;
         flex-direction: column;
         align-items: center;

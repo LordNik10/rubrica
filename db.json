@@ -3,47 +3,110 @@
     {
       "id": 1,
       "nome": "Niccolò",
-      "cognome": "Naso"
+      "cognome": "Naso",
+      "fotoprofilo": "../media/NiccolòNaso.jpeg",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 2,
       "nome": "Gianluca",
-      "cognome": "La Rosa"
+      "cognome": "La Rosa",
+      "fotoprofilo": "https://ca.slack-edge.com/TBUKN04GN-U03GJLV0DQ9-c9f5d603b634-512",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 3,
       "nome": "Marika",
-      "cognome": "Fabiani"
+      "cognome": "Fabiani",
+      "fotoprofilo": "../media/Marika Fabiani.png",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 4,
       "nome": "Daniel",
-      "cognome": "Zotti"
+      "cognome": "Zotti",
+      "fotoprofilo": "https://ca.slack-edge.com/TBUKN04GN-U020PG2J36W-e50a79c78c99-512",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 5,
       "nome": "Mario",
-      "cognome": "Rossi"
+      "cognome": "Rossi",
+      "fotoprofilo": "http://www.terranuova.it/var/terranuova/storage/images/news/attualita/cani-ecco-come-i-cuccioli-imparano-dall-uomo/1338268-1-ita-IT/Cani-ecco-come-i-cuccioli-imparano-dall-uomo.jpg",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 6,
       "nome": "Luigi",
-      "cognome": "Bianchi"
+      "cognome": "Bianchi",
+      "fotoprofilo": "https://www.blv.admin.ch/blv/it/home/tiere/tierschutz/heim-und-wildtierhaltung/hunde/augen-auf-beim-hundekauf/_jcr_content/image.imagespooler.jpg/1520345385855/588.1000/iStock_000010876067_Large.png",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 7,
       "nome": "Giovanna",
-      "cognome": "Verdi"
+      "cognome": "Verdi",
+      "fotoprofilo": "https://media-assets.wired.it/photos/615db921d8b66b13086d090c/1:1/w_590,h_590,c_limit/wired_placeholder_dummy.png",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 8,
       "nome": "Andrea",
-      "cognome": "Burlone"
+      "cognome": "Burlone",
+      "fotoprofilo": "https://www.verdeprogetto.it/wp-content/uploads/2019/08/cane-in-giardino-1080x774.jpg",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     },
     {
       "id": 9,
       "nome": "Elena",
-      "cognome": "Marchi"
+      "cognome": "Marchi",
+      "fotoprofilo": "https://media-assets.vanityfair.it/photos/614ca78bbd5298c930f36474/3:4/w_642,h_856,c_limit/cani-2.jpg",
+      "hobbies": ["Calcio","Videogames","Serie Tv","Film","Uscire con gli amici","Programmazione"],
+      "email": "niccolo.naso@bitrock.it",
+      "tel":123456789,
+      "residenza": "Pontedera(PI)",
+      "videoPreferito": "../media/Cassano Chapeau.mp4",
+      "saluto": "../media/Registrazione.m4a"
     }
   ]
 }

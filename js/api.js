@@ -27,3 +27,8 @@ async function deleteContact(id){
 
     return res;
 }
+
+async function loadCard (id){
+    const response = await fetch(`${apiUrl}/${id}`);
+    return response.json();
+}

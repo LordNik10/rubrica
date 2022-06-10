@@ -113,4 +113,24 @@ tr{
     table{
         width: 85%;
     }
+    .add-person{
+        flex-direction: column;
+    }
+    .reposition{
+        margin-bottom: 1%;
+    }
 }
+
+@media all and (max-width:500px) {
+    .input-container{
+        width: 50%;
+    }
+    .input-research{
+        width: 100%;
+    }
+    .btn-add{
+        width: 30%;
+    }
+    
+}
+

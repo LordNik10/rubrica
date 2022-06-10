@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../media/address-book-solid.svg">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -18,26 +19,28 @@
         <section class="container">
             <div class="card">
                 <div class="card-img pad">
-                    <img src="../media/NiccolòNaso.jpeg" alt="foto niccolò" class="imgprofilo">
+                    <img src="" alt="foto niccolò" class="imgprofilo" id="imgprofilo">
                 </div>
                 <div class="card-title">
-                    <h2>Niccolò Naso</h2>
+                    <h2 id="name-contact"></h2>
                 </div>
                 <div class="card-text">
                     <div class="contacts">
                         <h3>Contatti</h3>
-                        <span><label>Email:</label> <a href="mailto:niccolo.naso@bitrock.it">niccolo.naso@bitrock.it</a> </span>
+                        <span id="email"><label>Email:</label> <!--<a href="mailto:niccolo.naso@bitrock.it">niccolo.naso@bitrock.it</a>--> </span>
                         <br>
-                        <span><label>Tel: </label><a href="tel:9874616">3406894358</a></span>
+                        <span id="tel"><label>Tel: </label><!--<a href="tel:9874616">3406894358</a>--></span>
                         <br>
-                        <span> <p>Residenza: Pontedera (PI)</p> </span>
+                        <span id="residenza"><!-- <p>Residenza: Pontedera (PI)</p>--> </span>
                     </div>
                     <div class="hobbies">
                        <h3>Hobbies</h3>
                         <span>
-                            <p>
-                                Calcio, Videogames, Serie TV, Film, Uscire con gli amici, Programmazione
-                            </p>
+                            <ul id="list-hobbies" class="list-hobbies">
+
+                            </ul>
+                                <!-- Calcio, Videogames, Serie TV, Film, Uscire con gli amici, Programmazione -->
+                            
                         </span> 
                     </div>
                     
@@ -46,16 +49,16 @@
                     
                         <label for="video">Video preferito:</label>
                         <video controls width="250" id="video">
-                            <source src="../media//Cassano Chapeau.mp4" type="video/mp4">
+                            <source src="" type="video/mp4" id="favorite-video">
                         </video>
                     
     
                     <span>
                         <figure>
                             <figcaption>Un saluto a voi</figcaption>
-                            <audio
+                            <audio id="saluto"
                                 controls
-                                src="../media/Registrazione.m4a">
+                                src="">
                                     Your browser does not support the
                                     <code>audio</code> element.
                             </audio>
@@ -69,6 +72,8 @@
             Rubrica di Niccolò
         </footer>
     </div>
-    
+    <script src="../js/api.js"></script>
+    <script src="../js/card.js"></script>
+
 </body>
 </html>
