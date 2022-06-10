@@ -15,3 +15,15 @@ async function insertNewContact(person){
     });
     return res;
 }
+
+
+async function deleteContact(id){
+    const res = await fetch(`${apiUrl}/${id}`, {
+        headers: {
+            "Content-Type": "application/json",
+        },
+        method: "DELETE",
+    });
+
+    return res;
+}

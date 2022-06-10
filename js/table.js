@@ -70,12 +70,7 @@ async function deletePerson(id){
         if (!confirm('Sicuro di eliminare la persona selezionata?')){
             return;
         }
-        const res = await fetch(`http://localhost:3000/person/${id}`, {
-            headers: {
-                "Content-Type": "application/json",
-            },
-            method: "DELETE",
-        });
+        let res = await deleteContact(id);
         if (res.ok) {
             let tr = document.querySelector('#contact_'+id);
             tr.remove();
