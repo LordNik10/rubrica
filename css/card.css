@@ -133,12 +133,7 @@
     right: 0;
     padding: 10px;
 }
-.btn-modifica{
-    cursor: pointer;
-    background-color: #034f84;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-}
+
 .icon::before{
     content: '\f303';
     font-family: "Font Awesome 5 Free";
@@ -154,6 +149,37 @@
     height: 1200px;
     background-color: #92a8d1;
     position: relative;
+}
+
+.hobbies-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-modForm{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    width: 3%;
+    cursor: pointer;
+}
+
+.modForm-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
 }
 
 @media all and (max-width:2000px) and (min-width:1600px){

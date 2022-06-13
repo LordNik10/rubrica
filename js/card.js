@@ -55,39 +55,38 @@ async function buildCard(){
     }
     
 }
-
+let nHobbie=0;
 function showMod(){
     const card = document.querySelector('#card');
     card.style.display='none';
 
+    if (document.querySelector('#modForm')){
+        document.querySelector('#modForm').style.display='block';
+        return;
+    }
+
     const container = document.querySelector('#container');
 
-    const changePanel = document.createElement('div');
-    changePanel.id='modForm';
-    changePanel.className='modForm';
+    const modForm = document.createElement('div');
+    modForm.id='modForm';
+    modForm.className='modForm';
 
     const exit = document.createElement('img');
     exit.src='../media/times-solid.svg';
-    exit.style.position='absolute';
-    exit.style.top='0';
-    exit.style.right='0';
-    exit.style.padding='10px';
-    exit.style.width='3%';
+    exit.id='close';
+    exit.className='close';
+    exit.addEventListener('click',closeMod);
 
     const changePanelInfo = document.createElement('div');
-    changePanelInfo.style.width='100%'
-    changePanelInfo.style.display='flex';
-    changePanelInfo.style.flexDirection='column';
-    changePanelInfo.style.alignItems='center';
-    changePanelInfo.style.marginTop='15%';
+    changePanelInfo.id='modForm-body';
+    changePanelInfo.className='modForm-body';
 
     const titleContact = document.createElement('h3');
     titleContact.textContent='Contatti';
 
     const imgprofile = document.createElement('img');
     imgprofile.src=document.querySelector('#imgprofilo').src;
-    imgprofile.style.width='200px';
-    imgprofile.style.height='auto';
+    imgprofile.className='imgprofilo';
 
     const titleHobbies = document.createElement('h3');
     titleHobbies.textContent='Hobbies';
@@ -108,11 +107,21 @@ function showMod(){
     const btnSaveChange = document.createElement('button');
     btnSaveChange.type='button';
     btnSaveChange.style.marginTop='2%';
-    btnSaveChange.className='btn-modifica';
+    btnSaveChange.className='btn-generic';
     btnSaveChange.textContent='Salva';
-    btnSaveChange.style.content="";
     btnSaveChange.id='btn-save-change';
     btnSaveChange.addEventListener('click',saveMod);
+
+    const hobbiesContainer = document.createElement('div');
+    hobbiesContainer.id='hobbies-container';
+    hobbiesContainer.className='hobbies-container';
+
+    const addHobbie = document.createElement('button');
+    addHobbie.id='add-hobbie';
+    addHobbie.className='btn-generic';
+    addHobbie.textContent='Aggiungi hobbie';
+    addHobbie.style.marginBottom='3%';
+    addHobbie.addEventListener('click',addNewHobbie);
 
     changePanelInfo.appendChild(createLabel('Nome e cognome'));
     changePanelInfo.appendChild(createInput('text',document.querySelector('#name-contact').textContent,'name-contact-new'));
@@ -124,32 +133,31 @@ function showMod(){
     changePanelInfo.appendChild(createLabel('Tel:'));
     changePanelInfo.appendChild(createInput('text',document.querySelector('#telLink').textContent,'telLinkNew'));
     changePanelInfo.appendChild(titleHobbies);
+    changePanelInfo.appendChild(hobbiesContainer);
     for (let i=0;i<allHobbies.children.length;i++){
         const hobbie = allHobbies.children[i];
-        changePanelInfo.appendChild(createInput('text',hobbie.outerText,'hobbie'+i+'new'));
+        hobbiesContainer.appendChild(createInput('text',hobbie.outerText,'hobbie'+i+'new'));
+        nHobbie++;
     }
+    changePanelInfo.appendChild(addHobbie);
     changePanelInfo.appendChild(createLabel('Video preferito'));
     changePanelInfo.appendChild(favoriteVideo);
     changePanelInfo.appendChild(createLabel('Saluto'));
     changePanelInfo.appendChild(saluto);
     changePanelInfo.appendChild(btnSaveChange);
 
+    modForm.appendChild(exit);
+    modForm.appendChild(changePanelInfo);
 
-
-    changePanel.appendChild(exit);
-    changePanel.appendChild(changePanelInfo);
-
-    container.appendChild(changePanel);
+    container.appendChild(modForm);
 
 }
 
 function createInput(typeOfInput,content,id){
     const element = document.createElement('input');
     element.type=typeOfInput;
-    element.style.width='30%';
-    element.style.textAlign='center';
+    element.className='input-modForm';
     element.id=id;
-    element.style.marginBottom='1%';
     element.value= content;
 
     return element;
@@ -169,6 +177,12 @@ function saveMod(){
     const nameSurname = document.querySelector('#name-contact');
     nameSurname.textContent=document.querySelector('#name-contact-new').value;
 
+    const email = document.querySelector('#emailLink');
+    email.textContent=document.querySelector('#emailLinkNew').value;
+
+    const tel = document.querySelector('#telLink');
+    tel.textContent=document.querySelector('#telLinkNew').value;
+
     // const imgprofile = document.querySelector('#imgprofilo');
     // if (document.querySelector('#imgProfileNew').value!=""){
     //     console.log('sono dentro');
@@ -177,20 +191,38 @@ function saveMod(){
     //     imgprofile.src=document.querySelector('#imgProfileNew').webkitdirectory;
     // }
     const allHobbies = document.querySelector('#list-hobbies');
-    const numerHobbie = allHobbies.length;
+    console.log(allHobbies.childElementCount);
+    const numerHobbie = allHobbies.childElementCount;
+    console.log(numerHobbie);
     while (allHobbies.firstChild) {
+        console.log('dentro while');
     allHobbies.removeChild(allHobbies.firstChild);
-}
+    }
+    console.log(numerHobbie);
 
-
-    for (let i=0;i<numerHobbie;i++){
-        const hobbie = document.createElement('li');
-        hobbie.id='hobbie'+i;
-        hobbie.textContent=document.querySelector('#hobbie'+i+'new').value;
-        allHobbies.appendChild(hobbie);
+    for (let i=0;i<nHobbie;i++){
+        if (document.querySelector('#hobbie'+i+'new').value!=""){
+            const hobbie = document.createElement('li');
+            hobbie.id='hobbie'+i;
+            hobbie.textContent=document.querySelector('#hobbie'+i+'new').value;
+            allHobbies.appendChild(hobbie);
+        }
+        
     }
     
 }
+
+function closeMod(){
+    document.querySelector('#modForm').style.display='none';
+    document.querySelector('#card').style.display='grid';
+}
+
+function addNewHobbie(){
+    const newHobbie = createInput('text',"",'hobbie'+nHobbie+'new');
+    document.querySelector('#hobbies-container').appendChild(newHobbie);
+    nHobbie++;
+}
+
 
 
 document.addEventListener('DOMContentLoaded',function(){

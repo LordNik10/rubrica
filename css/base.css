@@ -50,6 +50,13 @@ header .website-name::before{
     justify-content: center;
 }
 
+.btn-generic{
+    cursor: pointer;
+    background-color: #034f84;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
 footer
 {
     background-color: #034f84;
