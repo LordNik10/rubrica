@@ -2,19 +2,19 @@
   "person": [
     {
       "id": 1,
-      "nome": "Niccolò",
-      "cognome": "Naso",
-      "fotoprofilo": "http://localhost:8080/media/Niccol%C3%B2Naso.jpeg",
       "hobbies": [
-        "Calcio",
-        "Videogames",
+        "1",
+        "2",
         "Serie Tv",
         "Film",
         "Uscire con gli amici",
         "Programmazione"
       ],
+      "nome": "Niccolò",
+      "cognome": "Naso",
       "email": "niccolo.naso@bitrock.it",
-      "tel": "123456789",
+      "tel": "1341343785",
+      "fotoprofilo": "http://localhost:8080/media/Niccol%C3%B2Naso.jpeg",
       "residenza": "Pontedera(PI)",
       "videoPreferito": "http://localhost:8080/media/CassanoChapeau.mp4",
       "saluto": "http://localhost:8080/media/Registrazione.m4a"
