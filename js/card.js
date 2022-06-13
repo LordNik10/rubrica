@@ -41,10 +41,23 @@ async function buildCard(){
             listHobbies.appendChild(liHobbies);
             i++;
         });
-        const favoriteVideo = document.querySelector('#favorite-video');
-        favoriteVideo.controls=true;
-        favoriteVideo.width='250px';
-        favoriteVideo.src=personInformation.videoPreferito;
+        const favoriteVideo = document.querySelector('#video');
+        console.log(favoriteVideo);
+        const sourceFavoriteVideo = document.createElement('source');
+        // sourceFavoriteVideo.src='../media/CassanoChapeau.mp4';
+        sourceFavoriteVideo.setAttribute('src','../media/CassanoChapeau.mp4');
+        sourceFavoriteVideo.id='video-source';
+        sourceFavoriteVideo.setAttribute("type", "video/mp4");
+        favoriteVideo.appendChild(sourceFavoriteVideo);
+        // favoriteVideo.controls=true;
+        // favoriteVideo.width='250px';
+        // favoriteVideo.src=personInformation.videoPreferito;
+
+        // let video = document.getElementById("video__container").firstElementChild;
+        // let source = document.createElement("source");
+        // source.setAttribute("src", "../assets/videos/sample.mp4");
+        // source.setAttribute("type", "video/mp4");
+        // video.appendChild(source);
         
         const saluto = document.querySelector('#saluto');
         saluto.src=personInformation.saluto;
@@ -101,7 +114,7 @@ function showMod(){
     const favoriteVideo = document.createElement('video');
     favoriteVideo.controls=true;
     favoriteVideo.id='favorite-video-new';
-    favoriteVideo.src=document.querySelector('#favorite-video').src;
+    favoriteVideo.src=document.querySelector('#video-source').src;
     favoriteVideo.className='video-style';
     
     const saluto = document.createElement('audio');
@@ -175,15 +188,9 @@ function createLabel (content){
 }
 
 function saveMod(){
-    console.log('dentro saveMod');
-    // deleteContact(id);
     let newPerson = {
         id: id,
-        nome: "",
-        cognome: "",
-        fotoprofilo:"",
         hobbies: [],
-        email: "",
     };
 
     document.querySelector('#modForm').style.display='none';
@@ -239,8 +246,6 @@ function saveMod(){
     newPerson.saluto=document.querySelector('#salutoNew').src;
 
     changeCard(id,newPerson);
-
-    // insertNewContact(newPerson);
     
 }
 
