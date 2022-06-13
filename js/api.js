@@ -32,3 +32,14 @@ async function loadCard (id){
     const response = await fetch(`${apiUrl}/${id}`);
     return response.json();
 }
+
+async function changeCard(id,person){
+    let res = await fetch(`${apiUrl}/${id}`, {
+        headers: {
+            "Content-Type": "application/json",
+        },
+        method: "PUT",
+        body: JSON.stringify(person),
+});
+return res;
+}

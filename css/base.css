@@ -57,6 +57,12 @@ header .website-name::before{
     font-family: 'Roboto', sans-serif;
 }
 
+.label-a-generic{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
 footer
 {
     background-color: #034f84;

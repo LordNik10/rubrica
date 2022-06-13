@@ -1,9 +1,11 @@
+let id;
+
 async function buildCard(){
     try {
         let url = window.location.search;
         console.log(window);
         url = url.split('=');
-        const id = url[1];
+        id = url[1];
         console.log(url);
         const personInformation = await loadCard(id);
         console.log(personInformation);
@@ -14,6 +16,7 @@ async function buildCard(){
         const email = document.querySelector('#email');
         const emailLink = document.createElement('a');
         emailLink.id='emailLink';
+        emailLink.className='label-a-generic';
         emailLink.textContent = personInformation.email;
         emailLink.href='mailto:niccolo.naso@bitrock.it';
         email.appendChild(emailLink);
@@ -21,6 +24,7 @@ async function buildCard(){
         const tel = document.querySelector('#tel');
         const telLink = document.createElement('a');
         telLink.id='telLink';
+        telLink.className='label-a-generic';
         telLink.textContent = personInformation.tel;
         telLink.href='tel:499763';
         tel.appendChild(telLink);
@@ -37,7 +41,6 @@ async function buildCard(){
             listHobbies.appendChild(liHobbies);
             i++;
         });
-
         const favoriteVideo = document.querySelector('#favorite-video');
         favoriteVideo.controls=true;
         favoriteVideo.width='250px';
@@ -83,6 +86,7 @@ function showMod(){
 
     const titleContact = document.createElement('h3');
     titleContact.textContent='Contatti';
+    titleContact.className='label-a-generic';
 
     const imgprofile = document.createElement('img');
     imgprofile.src=document.querySelector('#imgprofilo').src;
@@ -90,6 +94,7 @@ function showMod(){
 
     const titleHobbies = document.createElement('h3');
     titleHobbies.textContent='Hobbies';
+    titleHobbies.className='label-a-generic';
 
     const allHobbies = document.querySelector('#list-hobbies');
 
@@ -159,29 +164,44 @@ function createInput(typeOfInput,content,id){
     element.className='input-modForm';
     element.id=id;
     element.value= content;
-
     return element;
 }
 
 function createLabel (content){
     const element = document.createElement('label');
     element.textContent=content;
+    element.className='label-a-generic';
     return element;
 }
 
 function saveMod(){
     console.log('dentro saveMod');
+    // deleteContact(id);
+    let newPerson = {
+        id: id,
+        nome: "",
+        cognome: "",
+        fotoprofilo:"",
+        hobbies: [],
+        email: "",
+    };
+
     document.querySelector('#modForm').style.display='none';
     document.querySelector('#card').style.display='grid';
     
     const nameSurname = document.querySelector('#name-contact');
     nameSurname.textContent=document.querySelector('#name-contact-new').value;
+    let nomeCognome = nameSurname.textContent.split(" ");
+    newPerson.nome=nomeCognome[0];
+    newPerson.cognome=nomeCognome[1];
 
     const email = document.querySelector('#emailLink');
     email.textContent=document.querySelector('#emailLinkNew').value;
+    newPerson.email=email.textContent;
 
     const tel = document.querySelector('#telLink');
     tel.textContent=document.querySelector('#telLinkNew').value;
+    newPerson.tel=tel.textContent;
 
     // const imgprofile = document.querySelector('#imgprofilo');
     // if (document.querySelector('#imgProfileNew').value!=""){
@@ -190,6 +210,9 @@ function saveMod(){
     //     console.log(document.querySelector('#imgProfileNew').webRelativePath);
     //     imgprofile.src=document.querySelector('#imgProfileNew').webkitdirectory;
     // }
+
+    newPerson.fotoprofilo=document.querySelector('#imgprofilo').src;
+
     const allHobbies = document.querySelector('#list-hobbies');
     console.log(allHobbies.childElementCount);
     const numerHobbie = allHobbies.childElementCount;
@@ -206,9 +229,18 @@ function saveMod(){
             hobbie.id='hobbie'+i;
             hobbie.textContent=document.querySelector('#hobbie'+i+'new').value;
             allHobbies.appendChild(hobbie);
+            newPerson.hobbies[i]=hobbie.textContent;
         }
         
     }
+
+    newPerson.residenza="Pontedera(PI)";
+    newPerson.videoPreferito=document.querySelector('#favorite-video-new').src;
+    newPerson.saluto=document.querySelector('#salutoNew').src;
+
+    changeCard(id,newPerson);
+
+    // insertNewContact(newPerson);
     
 }
 
