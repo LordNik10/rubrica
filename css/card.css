@@ -287,6 +287,9 @@
         justify-content: center;
     }
     .modForm{
-        width: 80%;
+        width: 90%;
+    }
+    .input-modForm{
+        width: 50%;
     }
 }

@@ -144,7 +144,8 @@ function showMod(){
     changePanelInfo.appendChild(createLabel('Nome e cognome'));
     changePanelInfo.appendChild(createInput('text',document.querySelector('#name-contact').textContent,'name-contact-new'));
     changePanelInfo.appendChild(imgprofile);
-    changePanelInfo.appendChild(createInput('file','','imgProfileNew'));
+    // changePanelInfo.appendChild(createInput('file','','imgProfileNew'));
+    changePanelInfo.appendChild(createInput('text',document.querySelector('#imgprofilo').src,'imgProfileNew'));
     changePanelInfo.appendChild(titleContact);
     changePanelInfo.appendChild(createLabel('Email:'));
     changePanelInfo.appendChild(createInput('text',document.querySelector('#emailLink').textContent,'emailLinkNew'));
@@ -210,13 +211,9 @@ function saveMod(){
     tel.textContent=document.querySelector('#telLinkNew').value;
     newPerson.tel=tel.textContent;
 
-    // const imgprofile = document.querySelector('#imgprofilo');
-    // if (document.querySelector('#imgProfileNew').value!=""){
-    //     console.log('sono dentro');
-    //     console.log(imgprofile.src);
-    //     console.log(document.querySelector('#imgProfileNew').webRelativePath);
-    //     imgprofile.src=document.querySelector('#imgProfileNew').webkitdirectory;
-    // }
+    const imgprofile = document.querySelector('#imgprofilo');
+    imgprofile.src=document.querySelector('#imgProfileNew').value;
+    
 
     newPerson.fotoprofilo=document.querySelector('#imgprofilo').src;
 
