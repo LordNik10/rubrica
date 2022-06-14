@@ -1,0 +1,18 @@
+:root {
+  --spacing-default: 8px;
+  --spacing-small: calc(var(--spacing-default) * 0.5);
+  --spacing-medium: calc(var(--spacing-default) * 2);
+  --spacing-large: calc(var(--spacing-default) * 4);
+
+  --color-primary: red;
+  --color-primary--light: pink;
+
+  --color-secondary: blue;
+  --color-secondary--light: lightblue;
+}
+
+/*
+.card {
+  padding: var(--spacing-medium)
+}
+*/

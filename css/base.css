@@ -1,80 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-html,body{
-    margin: 0;
-    padding: 0;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-.main-container{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 0.15fr 1fr 100px;
-    position: relative;
+.main-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 0.15fr 1fr 100px;
+  position: relative;
 }
 
-.page-title{
-    font-family: 'Lobster', cursive;
-    text-align: center;
-    color: #034f84;
+.page-title {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color: #034f84;
 }
 
-header{
-    width: 100%;
-    background-color: #034f84;
-    color: white;
-    font-family: 'Lobster', cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .website-name::before{
-    content: '\f2b9';
-    font-family:"Font Awesome 5 Free";
-    margin-right: 1%;
+header {
+  width: 100%;
+  background-color: #034f84;
+  color: white;
+  font-family: 'Lobster', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.website-name{
-    text-decoration: none;
-    color: white;
-    font-size: 35px;
+header .website-name::before {
+  content: '\f2b9';
+  font-family: "Font Awesome 5 Free";
+  margin-right: 1%;
 }
 
-.btn-icon{
-    border: 1px solid white;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.website-name {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
 }
 
-.btn-generic{
-    cursor: pointer;
-    background-color: #034f84;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+.btn-icon {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.label-a-generic{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
+.btn-generic {
+  cursor: pointer;
+  background-color: #034f84;
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-footer
-{
-    background-color: #034f84;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    color: white;
-    justify-content: center;
-    font-family: 'Lobster', cursive;
-    align-items: center;
-    height: 50%;
-    grid-row: 4/5;
-    position:absolute;
-    bottom: 0;
+.label-a-generic {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #034f84;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-family: 'Lobster', cursive;
+  align-items: center;
+  height: 50%;
+  grid-row: 4/5;
+  position: absolute;
+  bottom: 0;
+}
+
+.icon-edit::before {
+  content: '\f303'; /*pencil icon*/
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  margin-right: 4%;
 }
